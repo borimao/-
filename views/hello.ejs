@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <link type="text/css" href="./draw.css" rel="stylesheet">
+    <link type="text/css" href="./chat.css" rel="stylesheet">
+    <script type="text/javascript" src="./draw.js"></script>
+    <script type="text/javascript" src="./chat.js"></script>
+</head>
+
+<body id="bo">
+    <header>
+        <span id="hed_id">RoomID：<%= title %></span>
+        <span id="hed_user">LoginUser/<%- content %></span>
+    </header>
+    
+    <ul class="messages" id="msg_h"></ul>
+    <div id="ms_form">
+        <form>
+            <input id="room_name" type="hidden" value="<%= room_name %>">
+            <input id="login_name" type="hidden" value="<%= login_name %>">
+            <input id="room_id" type="hidden" value="<%= room_id %>">
+            <input id="login_id" type="hidden" value="<%= login_id %>">
+            <input type="text" id="input_msg" size="60">
+            <input class="d_button" type="submit" id="message_form" value="Send">
+        </form>
+        <button id="canvas_sc" class="d_button about_b">　↑　</button>
+    </div>
+    <div id="canvas_move">
+    <div id="canvas_alea">
+        <div id="can"><canvas id="mycanvas" width="500" height="400"></canvas></div>
+        <div id="canvasmenu">
+            <div class="menuicon" id="color000000" style="background-color:#000000;"></div>
+            <div class="menuicon" id="colorabff2f" style="background-color:#abff2f;"></div>
+            <div class="menuicon" id="color008000" style="background-color:#008000;"></div>
+            <div class="menuicon" id="color00ffff" style="background-color:#00ffff;"></div>
+            <div class="menuicon" id="color0000ff" style="background-color:#0000ff;"></div>
+            <div class="menuicon" id="colorff0000" style="background-color:#ff0000;"></div>
+            <div class="menuicon" id="colorffa500" style="background-color:#ffa500;"></div>
+            <div class="menuicon" id="colorffff00" style="background-color:#ffff00;"></div>
+            <div class="menuicon" id="colorff69b4" style="background-color:#ff69b4;"></div>
+            <div class="menuicon" id="colorf5f5f5" style="background-color:#f5f5f5;">消</div>
+        </div>
+        <div id="canvas_var">
+            <!--<div class="canvasslider">
+                <span>明</span><br>
+                <input id="akarusa" class="bar" type="range" value="10" min="1" max="10" step="1" />
+                <br><span id="a_na">10</span>
+            </div>-->
+            <div class="canvasslider">
+                <span>太<br></span>
+                <input id="hutosa" class="bar" type="range" value="10" min="1" max="20" step="1" />
+                <br><span id="h_na">10</span>
+            </div>
+            <br>
+            <input id="ollclear" type="button" name="ollclear" value="全消し" class="d_button about_b">
+            <br><button id="canvas_save" class="d_button about_b">保存</button>
+            <br><button id="canvas_form" class="d_button">送信</button>
+        </div>
+        <div id="canvas_stamp">
+            <li><img src="" alt="" class="stamp" witdh="150" height="120"></li>
+            <li><img src="" alt="" class="stamp" witdh="150" height="120"></li>
+            <li><img src="" alt="" class="stamp" witdh="150" height="120"></li>
+            <li><img src="" alt="" class="stamp" witdh="150" height="120"></li>
+            <li><img src="" alt="" class="stamp" witdh="150" height="120"></li>
+            <li><img src="" alt="" class="stamp" witdh="150" height="120"></li>
+            <li><img src="" alt="" class="stamp" witdh="150" height="120"></li>
+            <li><img src="" alt="" class="stamp" witdh="150" height="120"></li>
+            <li><img src="" alt="" class="stamp" witdh="150" height="120"></li>
+        </div>
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" href="./login.css" rel="stylesheet">
+        <title><%= title %></title>
+    </head>
+    <body>
+        <h1><%- title %></h1>
+        <p><%- content %></p>
+        <form method="POST" action="/users">
+            <table>
+                <tr>
+                    <td colspan="2"><input class="text" type="text" name="name" value="<%= form.name %>" placeholder="　名前"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="text" type="password" name="password" value="<%= form.password %>" placeholder="　パスワード"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="button" type="submit" value="ログイン"></td>
+                </tr>
+            </table>
+        </form>
+        <a class="add_link" href="/users/add">新規作成</a><br>
+        <a class="room_link" href="/">ルーム選択</a>
+        
+    </body>
+</html>

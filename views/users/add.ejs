@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" href="../login.css" rel="stylesheet">
+        <title><%= title %></title>
+    </head>
+    <body>
+        <h1><%- title %></h1>
+        <p><%- content %></p>
+        <form method="POST" action="/users/add">
+            <table>
+                <tr>
+                    <td colspan="2"><input class="text" type="text" name="name" value="<%= form.name %>" placeholder="　名前"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="text" type="password" name="password" value="<%= form.password %>" placeholder="　パスワード"></td>
+                </tr>
+                <tr style="display: none;">
+                    <th>COMMENT</th>
+                    <td><textarea name="comment"><%= form.comment %></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="button" type="submit" value="登録！"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" href="./login.css" rel="stylesheet">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <p><%- content %></p>
+    <form method="post" action="/">
+        <select name="name" class="sel">
+            <option value="ルームA">ルームA</option>
+            <option value="ルームB">ルームB</option>
+            <option value="ルームC">ルームC</option>
+        </select>
+        <br><button class="button">開始する</button>
+    </form>
+</body>
+</html>
